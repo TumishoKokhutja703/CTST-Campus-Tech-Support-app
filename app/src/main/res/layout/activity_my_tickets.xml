@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- My Tickets screen — full list of all the user's tickets -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/bg">
+
+    <!-- Navy header bar -->
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@drawable/nav_header_bg" android:padding="20dp"
+        android:orientation="horizontal" android:gravity="center_vertical">
+        <TextView android:id="@+id/tvBack" android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="←"
+            android:textSize="20sp" android:textColor="@color/white"
+            android:layout_marginEnd="12dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="My Tickets" android:textSize="18sp"
+            android:textStyle="bold" android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <!-- Ticket list -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTickets"
+        android:layout_width="match_parent" android:layout_height="0dp"
+        android:layout_weight="1" android:padding="12dp" android:clipToPadding="false"/>
+
+    <!-- Empty state shown when there are no tickets -->
+    <TextView android:id="@+id/tvEmpty"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="No tickets yet.\nTap Log to report an issue."
+        android:textSize="13sp" android:textColor="@color/muted"
+        android:gravity="center" android:padding="32dp" android:visibility="gone"/>
+
+    <!-- Bottom navigation bar -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@color/surface"
+        app:menu="@menu/bottom_nav_menu"/>
+</LinearLayout>

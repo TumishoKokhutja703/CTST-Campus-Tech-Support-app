@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Internet permission — required for API calls -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="CTST"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CTST"
+        android:usesCleartextTraffic="true">
+
+        <!-- SplashActivity — shown FIRST when the app opens -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.CTST">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- MainActivity — Login screen  -->
+        <activity android:name=".MainActivity" android:exported="false" />
+
+        <!-- RegisterActivity — Create account screen -->
+        <activity android:name=".RegisterActivity" android:exported="false" />
+
+        <!-- DashboardActivity — Home screen after login -->
+        <activity android:name=".DashboardActivity" android:exported="false" />
+
+        <!-- MyTicketsActivity — Full ticket list -->
+        <activity android:name=".MyTicketsActivity" android:exported="false" />
+
+        <!-- LogTicketActivity — Submit a new ticket -->
+        <activity android:name=".LogTicketActivity" android:exported="false" />
+
+        <!-- TicketDetailActivity — View one ticket in full -->
+        <activity android:name=".TicketDetailActivity" android:exported="false" />
+
+        <!-- NotificationsActivity — Status update notifications -->
+        <activity android:name=".NotificationsActivity" android:exported="false" />
+
+        <!-- ProfileActivity — User profile and logout -->
+        <activity android:name=".ProfileActivity" android:exported="false" />
+
+    </application>
+
+
+</manifest>

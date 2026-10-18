@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    activity_splash.xml — Splash screen layout
+    Shows the Rosebank logo, app name and a loading spinner
+    on a navy blue background for 2 seconds.
+
+    WHERE TO PUT THIS FILE:
+    app/src/main/res/layout/activity_splash.xml
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/navy"
+    android:padding="40dp">
+
+    <!-- Rosebank College logo -->
+    <!-- Make sure rosebank_logo.png is in app/src/main/res/drawable/ -->
+    <ImageView
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/rosebank_logo"
+        android:contentDescription="IIE Rosebank College"
+        android:adjustViewBounds="true"
+        android:layout_marginBottom="40dp"/>
+
+    <!-- Divider line between logo and app name -->
+    <View
+        android:layout_width="60dp"
+        android:layout_height="2dp"
+        android:background="#44FFFFFF"
+        android:layout_marginBottom="32dp"/>
+
+    <!-- App name -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CTST"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:letterSpacing="0.12"
+        android:layout_marginBottom="10dp"/>
+
+    <!-- App full name -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Campus Tech Support Ticket System"
+        android:textSize="13sp"
+        android:textColor="#B3FFFFFF"
+        android:gravity="center"
+        android:layout_marginBottom="6dp"/>
+
+    <!-- College name -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="IIE Rosebank College"
+        android:textSize="11sp"
+        android:textColor="#66FFFFFF"
+        android:gravity="center"
+        android:layout_marginBottom="60dp"/>
+
+    <!-- Loading spinner — white colour on navy background -->
+    <ProgressBar
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/white"/>
+
+</LinearLayout>
